@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Chatbotflowbuilder/static/css/main.601ac330.css",
+    "main.js": "/Chatbotflowbuilder/static/js/main.2e7c495f.js",
+    "index.html": "/Chatbotflowbuilder/index.html",
+    "main.601ac330.css.map": "/Chatbotflowbuilder/static/css/main.601ac330.css.map",
+    "main.2e7c495f.js.map": "/Chatbotflowbuilder/static/js/main.2e7c495f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.601ac330.css",
+    "static/js/main.2e7c495f.js"
+  ]
+}
