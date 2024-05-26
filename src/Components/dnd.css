@@ -1,0 +1,59 @@
+.dndflow {
+  flex-direction: row;
+  display: flex;
+  height: 90vh;
+}
+.dndflow-save{
+  background-color: rgb(233, 233, 233);
+}
+.save{
+  display: flex;
+ flex-direction: row-reverse;
+  padding-right: 60px;
+}
+.save-btn{
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(4, 168, 218);
+  margin: 5px;
+}
+
+.dndflow aside {
+  border-left: 1px solid #eee;
+  padding: 15px 0px;
+  font-size: 12px;
+  background: #fcfcfc;
+  width: 200px;
+}
+
+.dndflow aside > * {
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+.dndflow aside .description {
+  margin-bottom: 10px;
+}
+
+.dndflow .reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background-color:rgb(59, 59, 59);
+
+}
+
+@media screen and (min-width: 768px) {
+  .dndflow {
+    flex-direction: row;
+  }
+
+  .dndflow aside {
+  width: 300px;
+   
+  }
+}
