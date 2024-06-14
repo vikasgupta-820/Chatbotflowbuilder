@@ -9,7 +9,9 @@ const Node = ({ data, selected }) => {
   return (
     <div className="text-updater-node">
       <div className={`message-body ${selected ? "selected" : ""}`}>
-        <div className="message-title">{data?.heading}</div>
+        <div className="message-title">
+          {data?.heading}  
+       </div>
         <div className="contentWrapper">{data?.content}</div>
       </div>
       <Handle type="source" position={Position.Right} id="b" />

@@ -15,6 +15,8 @@ import {
   nodes as initialNodes,
   edges as initialEdges
 } from "../initial-data";
+import Success from "./Toast/Success";
+import Error from "./Toast/Error";
 
 let id = 0;
 const getId = () => `dndnode_${id++}`;
@@ -30,6 +32,9 @@ const ChatBotFlowBuilder = () => {
   const [selectedNode, setSelectedNode] = useState(null);
   const [isSelected, setIsSelected] = useState(false);
   const [nodeName, setNodeName] = useState("Node 1");
+  const[toast,setToast] = useState(false)
+  const[errrorToast,setErrorToast] = useState(false)
+
 
   //The onInit callback is called when the viewport is initialized. At this point you can use the instance to call methods like fitView or zoomTo.
   const onInit = (reactFlowInstance) => setReactFlowInstance(reactFlowInstance);
@@ -107,12 +112,20 @@ const ChatBotFlowBuilder = () => {
   }, [nodeName, setNodes]);
 
   const handleSave = () => {
-    if (isAllNodeConnected(nodes, edges)) alert("Flow Saved Successfully");
-    else alert("Cannot Save Flow");
+    return isAllNodeConnected(nodes, edges) ?  setToast(true) : setErrorToast(true)
   };
-
+const handleClose = () => {
+  setToast(false)
+  setErrorToast(false)
+}
   return (
     <>
+    {
+      toast ? (<Success text="Flow Saved Successfully" handleClose={handleClose}/>) : null
+    }
+    {
+      errrorToast? (<Error text="Cannot Save Flow" handleClose={handleClose}/>) : null
+    }
     <div className="dndflow-save">
       <div className="save">
       <button className="save-btn" onClick={handleSave}>Save Changes</button>
