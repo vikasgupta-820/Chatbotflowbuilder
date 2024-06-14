@@ -29,6 +29,28 @@
     border-radius: 5px 5px 0px 0px;
     padding:0px 2px 0px 8px;
   }
+  .message-title > span{
+    padding: 3px 2px 0px 0px;
+  }
+  .whats-app-container{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+  }
+  .whats-app-container > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  .whats-app-container > div > svg{
+    fill:#25D366;
+  }
  
 
   .contentWrapper{

@@ -112,7 +112,7 @@ const ChatBotFlowBuilder = () => {
   }, [nodeName, setNodes]);
 
   const handleSave = () => {
-    return isAllNodeConnected(nodes, edges) ?  setToast(true) : setErrorToast(true)
+    return isAllNodeConnected(nodes, edges) ?  setToast((prev) => !prev) : setErrorToast((prev) => !prev)
   };
 const handleClose = () => {
   setToast(false)
@@ -154,6 +154,7 @@ const handleClose = () => {
             textRef={textRef}
             nodeName={nodeName}
             setNodeName={setNodeName}
+            handleCloseBtn={() => setIsSelected(false)}
           />
         </ReactFlowProvider>
       </div>

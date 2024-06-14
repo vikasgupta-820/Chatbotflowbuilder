@@ -1,8 +1,12 @@
 import "./messageEdit.css";
-export default function MessageEdit({ textRef, nodeName, setNodeName }) {
+import { IoArrowBack } from "react-icons/io5";
+export default function MessageEdit({ textRef, nodeName, setNodeName,handleCloseBtn }) {
   return (
     <div className="updatenode__controls">
       <div className="label-header-container">
+      <div className="back-btn" onClick={handleCloseBtn}>
+     <IoArrowBack />
+      </div>
         <label className="label-header">Message</label>
       </div>
       <div className="label-text-container">

@@ -2,6 +2,8 @@ import React, { memo } from "react";
 
 import { Handle, Position } from "reactflow";
 import "./messageNode.css";
+import { BsChatText } from "react-icons/bs";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Node = ({ data, selected }) => {
 
@@ -10,7 +12,10 @@ const Node = ({ data, selected }) => {
     <div className="text-updater-node">
       <div className={`message-body ${selected ? "selected" : ""}`}>
         <div className="message-title">
-          {data?.heading}  
+          <span><BsChatText/></span>&nbsp;{data?.heading}
+          <div className="whats-app-container">
+            <div><IoLogoWhatsapp/></div>
+            </div>  
        </div>
         <div className="contentWrapper">{data?.content}</div>
       </div>
