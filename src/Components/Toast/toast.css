@@ -1,0 +1,22 @@
+
+.toast-container{
+    position: absolute;
+    top: 10px;
+    left: 45%;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+}
+.toast-container.success{
+    font-size: 10px;
+    background-color: aquamarine;
+}
+.toast-container.error{
+    font-size: 12px;
+    background-color: rgb(255, 155, 138);
+}
